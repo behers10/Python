@@ -1,0 +1,37 @@
+First Visualisation
+--------------------
+import numpy as np
+import matplotlib.pyplot as plt
+plt.rcParams['figure.figsize']=8,6 # size of plot
+%matplotlib inline # require to write for jupyter notebook ---remove thsi comment line
+plt.plot(Salary[0],c='Black',ls='--',marker='s',ms=7,label=Players[0])# s is square,ms is marker size
+plt.plot(Salary[1],c='Blue',ls='--',marker='^',ms=7,label=Players[1])
+plt.plot(Salary[2],c='Red',ls='--',marker='D',ms=7,label=Players[3])
+plt.legend(loc = 'upper left',bbox_to_anchor=(1,0))
+plt.xticks(list(range(0,10)),Seasons,rotation='vertical')
+plt.show()
+
+
+Function
+---------------------------
+col={'KobeBryant' : 'Black','LeBronJames' : 'Blue','DerrickRose' : 'Pink'}
+def myplot(data,pnames):
+    for nm in pnames:
+        plt.plot(data[Pdict[nm]],c=col[nm],ls='--',marker='s',ms=7,label=nm)
+    plt.legend(loc = 'upper left',bbox_to_anchor=(1,1))
+    plt.xticks(list(range(0,10)),Seasons,rotation='vertical')
+    plt.show()
+	
+	myplot(Points,["KobeBryant","LeBronJames","DerrickRose"])
+	
+	
+p=['KobeBryant','LeBronJames','DerrickRose']
+p
+
+col={'KobeBryant' : 'Black','LeBronJames' : 'Blue','DerrickRose' : 'Pink'}
+def myplot(data,pnames = p):  # Default Parameter , we are passing p list as default , we can also pass single value such as 'KobeBryant' --check this
+    for nm in pnames:
+        plt.plot(data[Pdict[nm]],c=col[nm],ls='--',marker='s',ms=7,label=nm)
+    plt.legend(loc = 'upper left',bbox_to_anchor=(1,1))
+    plt.xticks(list(range(0,10)),Seasons,rotation='vertical')
+    plt.show()
