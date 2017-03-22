@@ -1,0 +1,64 @@
+MyList = [12, True, 34.5, 23, 55, "34hello"]
+MyList[2]
+34.5
+
+t=list(range(2,11))
+t
+
+l1 = [20, 'a', 21, 'b', 22, 'c', 23, 'd', 24, 'e', 25, 'f']
+l1[-1:-12:-2]
+['f', 'e', 'd', 'c', 'b', 'a']
+
+l1 = [20, 'a', 21, 'b', 22, 'c', 23, 'd', 24, 'e', 25, 'f']
+l1[-11::2]
+['a', 'b', 'c', 'd', 'e', 'f']
+
+
+Create Metrix
+------------------
+ np.reshape(*,*,'C')
+ first parameter : data 
+ seconda parameter : row column specification
+ third parameter : way of filling data  , C ---row column(opposite to R (column wisse) --default , F ----column wise 
+ 
+	 import numpy as np
+	 mydata = np.arrange(0,20)
+	 print(mydata)
+	 [ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+	t= np.reshape(mydata,(5,4)) 
+	 or we can wrote   np.reshape(mydata,(5,4),order='C') 
+	 t[2,2]=10
+	 
+13-Mar-2016
+------------
+print(Games[rows,column])   if column is negative then the column value starts from last
+print (Games[2]) --> whole second array
+print (Games[:,3]) --> whole third  column 
+print (Games [:][3]) ----> whole third array
+
+
+Basket Ball data
+Dictinoaries
+---------------
+Dictionary is referenced to key but it does not have order set of elements 
+List have order set of data
+
+dict1 = {'key1' : 'val1','key2' :'val3' ,'key3' : 'val3' }
+dict1['key1']
+dict1[1]--> error , dictinary uses key to refernce an elements
+
+Games[Pdict['KobeBryant']] finds player and its respective data 	
+------------------------------------------------------------------------
+
+Metric Operation 
+--------------------
+FieldGoals / Games
+
+it will divide the metric in correct way but will giev warning as some data has 0 so 0/0 not correct data
+to ignore warning 
+
+import warnings
+warnings.filterwarnings('ignore')
+
+rounding the metric data using 
+np.matrix.round(FieldGoals / Games,2)
