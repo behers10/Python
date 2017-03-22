@@ -1,0 +1,34 @@
+List Given
+----------------
+
+KobeBryant_FT = [696,667,623,483,439,483,381,525,18,196]
+JoeJohnson_FT = [261,235,316,299,220,195,158,132,159,141]
+
+to create matrics
+-----------------
+import numpy as np
+
+p=np.array([KobeBryant_FT,JoeJohnson_FT])
+
+
+import numpy as np
+FreeThrows = np.array([KobeBryant_FT, JoeJohnson_FT, LeBronJames_FT, CarmeloAnthony_FT, DwightHoward_FT, ChrisBosh_FT, ChrisPaul_FT, KevinDurant_FT, DerrickRose_FT, DwayneWade_FT])
+print (FreeThrows)
+FreeThrowAttempts = np.array([KobeBryant_FTA, JoeJohnson_FTA, LeBronJames_FTA, CarmeloAnthony_FTA, DwightHoward_FTA, ChrisBosh_FTA, ChrisPaul_FTA, KevinDurant_FTA, DerrickRose_FTA, DwayneWade_FTA])
+print (FreeThrowAttempts)
+Sdict = {"2005":0,"2006":1,"2007":2,"2008":3,"2009":4,"2010":5,"2011":6,"2012":7,"2013":8,"2014":9}
+
+# Players
+Pdict = {"KobeBryant":0,"JoeJohnso	":1,"LeBronJames":2,"CarmeloAnthony":3,"DwightHoward":4,"ChrisBosh":5,"ChrisPaul":6,"KevinDurant":7,"DerrickRose":8,"DwayneWade":9}
+
+Col = {"KobeBryant":"Black","JoeJohnson":"Red","LeBronJames":"Green","CarmeloAnthony":"Blue","DwightHoward":"Magenta","ChrisBosh":"Black","ChrisPaul":"Red","KevinDurant":"Green","DerrickRose":"Blue","DwayneWade":"Magenta"}
+Mrk = {"KobeBryant":"s","JoeJohnson":"o","LeBronJames":"^","CarmeloAnthony":"D","DwightHoward":"s","ChrisBosh":"o","ChrisPaul":"^","KevinDurant":"D","DerrickRose":"s","DwayneWade":"o"}
+import matplotlib.pyplot as plt
+def myplot(data,ply = Players):
+    for nm in ply:
+        plt.plot(data[Pdict[nm]],c=Col[nm],ls='--',marker=Mrk[nm],ms='7',label=nm)
+    plt.legend(loc = 'upper left',bbox_to_anchor=(1,1))
+    plt.xticks(list(range(0,10)),Seasons,rotation='vertical')
+    plt.show()
+    
+myplot(FreeThrows)
