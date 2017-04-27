@@ -1,0 +1,33 @@
+#lecture 25
+#Get the file data by specifying fullpath of file
+import pandas as pd
+stats=pd.read_csv('C:\\Users\\behers10\\Documents\\Python Scripts\\DemographicData.csv')
+stats
+
+#change working dirwectort
+import os
+os.getcwd()
+-->'C:\\Users\\behers10\\Documents'
+
+#Change directory to Python Scripts
+os.chdir('C:\\Users\\behers10\\Documents\\Python Scripts')
+pd.read_csv('DemographicData.csv')
+
+
+#lecture 26
+#Exploring the data set
+
+len(stats)#-->no. of rows
+stats.columns #--> list the columns 
+len(stats.columns)# -->no. of columns
+stats.head(6)#--> top 6 rows stats.head() will give 5 rows 
+stats.tail(6)#--> last 6 rows
+stats.info#--> Information about the table
+stats.info()#--> Profiling information about table
+stats.describe()#--> calculated details
+stats.describe().transpose() #-->trasnpose above details 
+
+
+#lecture 26
+#Renaming the column
+
