@@ -1,0 +1,38 @@
+Slicing the Dataset
+stats[21:26]
+# from 21 rows to 25 (as it start with 0 to end -1)
+stats[2:4]
+--> row 2,3
+
+stats[:]
+all rows
+stats[:10]
+-->first 10 rows
+
+Reverse the data frame
+--------------------------
+stats[::-1] # reverse the dataset 
+
+stats = stats[::-1] # assigning to new dara frame
+
+
+get only 20th country
+----------------------
+stats[::20]# 0,20,40,60....
+
+Only select one column
+----------------------
+stats['CountryName'].head()    # first five rows
+
+stats[['Countryname]].head()  # first five rows in tabular form
+
+
+Requires the Name to be one word
+--------------------------------
+stats.BirthDate  # select one column
+
+Slicing + selcting column
+-------------------------
+stats[4:8][['CountryName','Birthdate']]
+stats[['CountryName','Birthdate']][4:8]
+# above commands will give 4:7 rows with only two columns
