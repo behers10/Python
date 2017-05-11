@@ -1,0 +1,17 @@
+##Introduction to Seaborn
+##upgrade to matplotlib
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings as wn
+wn.filterwarnings('ignore') ### to filter the warnings
+%matplotlib inline ## graphs are plotted in our jupyter notebook
+
+## disttribution
+visl = sns.distplot(stats["Internet users"])
+##visl = sns.distplot(stats["Internet users"],shoft+tab(how this function works)
+import warnings as wn
+wn.filterwarnings('ignore') ### to filter the warnings
+plt.rcParams['figure.figsize'] = 8,4 ###increase the size of of graph
+visl = sns.distplot(stats["Internet users"],bins=100)
+vis2 = sns.boxplot(data=stats , x="Income Group",y="Birth rate")
